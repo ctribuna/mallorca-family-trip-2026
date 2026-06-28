@@ -244,12 +244,19 @@
     progress.className='scroll-progress';
     progress.setAttribute('aria-hidden','true');
     document.body.prepend(progress);
+    let progressTicking=false;
     const updateProgress=()=>{
       const max=document.documentElement.scrollHeight-window.innerHeight;
       progress.style.transform=`scaleX(${max>0 ? Math.min(1,window.scrollY/max) : 0})`;
+      progressTicking=false;
+    };
+    const requestProgressUpdate=()=>{
+      if(progressTicking) return;
+      progressTicking=true;
+      requestAnimationFrame(updateProgress);
     };
     updateProgress();
-    window.addEventListener('scroll',updateProgress,{passive:true});
+    window.addEventListener('scroll',requestProgressUpdate,{passive:true});
 
     const revealItems=document.querySelectorAll('.card,.section-head,.food');
     revealItems.forEach((el,i)=>{ el.classList.add('reveal'); el.style.transitionDelay=`${Math.min(i%6,5)*35}ms`; });
@@ -265,7 +272,7 @@
       if(!visible) return;
       navLinks.forEach(a=>a.classList.remove('active'));
       const active=sectionMap.get(visible.target.id);
-      if(active){ active.classList.add('active'); active.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'}); }
+      if(active) active.classList.add('active');
     },{threshold:[.18,.32,.5],rootMargin:'-90px 0px -55% 0px'});
     document.querySelectorAll('main section[id]').forEach(section=>navObserver.observe(section));
 
