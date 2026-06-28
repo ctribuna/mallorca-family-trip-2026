@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Logotipo Mallorca 2026 — Famílias Tribuna, Braga e Nunes</title>
+  <desc id="desc">Logotipo circular mediterrânico com sol, ondas, palmeira, avião e os nomes das famílias Tribuna, Braga e Nunes.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7ed"/>
+      <stop offset="0.48" stop-color="#ffe4e6"/>
+      <stop offset="1" stop-color="#dff7f6"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0ea5a4"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#fb8500"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#222222" flood-opacity="0.18"/>
+    </filter>
+    <path id="topArc" d="M 210 615 A 390 390 0 0 1 990 615"/>
+    <path id="bottomArc" d="M 990 645 A 390 390 0 0 1 210 645"/>
+  </defs>
+
+  <rect width="1200" height="1200" fill="#fffaf7"/>
+  <circle cx="600" cy="600" r="505" fill="url(#sky)" filter="url(#softShadow)"/>
+  <circle cx="600" cy="600" r="505" fill="none" stroke="#ffffff" stroke-width="26"/>
+  <circle cx="600" cy="600" r="465" fill="none" stroke="#ff385c" stroke-width="10"/>
+
+  <!-- curved family names -->
+  <text font-family="'DM Sans', 'Inter', Arial, sans-serif" font-size="42" font-weight="900" letter-spacing="7" fill="#222222">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">TRIBUNA • BRAGA • NUNES</textPath>
+  </text>
+
+  <!-- sun -->
+  <g transform="translate(600 420)">
+    <circle r="150" fill="url(#sun)"/>
+    <circle r="118" fill="#ffe8a3" opacity="0.52"/>
+  </g>
+
+  <!-- island silhouette -->
+  <path d="M355 610c70-66 158-84 237-76 87 9 140 48 207 38 55-8 112-35 154 4 37 35 24 101-37 130-54 26-132 20-205 28-114 13-180 61-291 42-86-15-166-66-177-124-5-26 21-45 112-42z" fill="#1f7a6f" opacity="0.96"/>
+  <path d="M373 625c78-43 151-51 223-43 92 11 137 42 210 30 46-8 91-22 121 3" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- palm -->
+  <g transform="translate(706 444) rotate(8)">
+    <path d="M-20 290 C 5 205 18 112 0 20" fill="none" stroke="#5c3b20" stroke-width="24" stroke-linecap="round"/>
+    <path d="M0 26 C-94 0-151 32-205 92 C-110 78-55 54 0 26z" fill="#0f766e"/>
+    <path d="M0 20 C-42-56-105-88-184-88 C-113-31-58-5 0 20z" fill="#0ea5a4"/>
+    <path d="M5 18 C75-58 145-78 222-54 C129-19 72 2 5 18z" fill="#0f766e"/>
+    <path d="M0 28 C74 9 145 37 199 94 C111 78 56 55 0 28z" fill="#14b8a6"/>
+    <path d="M-2 18 C20-72 69-126 139-157 C98-76 57-25-2 18z" fill="#0f766e"/>
+  </g>
+
+  <!-- waves -->
+  <g transform="translate(0 705)">
+    <path d="M230 40c50-38 100-38 150 0s100 38 150 0 100-38 150 0 100 38 150 0 100-38 150 0" fill="none" stroke="url(#sea)" stroke-width="30" stroke-linecap="round"/>
+    <path d="M270 102c42-30 84-30 126 0s84 30 126 0 84-30 126 0 84 30 126 0 84-30 126 0" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+    <path d="M305 150c33-24 66-24 99 0s66 24 99 0 66-24 99 0 66 24 99 0 66-24 99 0" fill="none" stroke="#38bdf8" stroke-width="18" stroke-linecap="round" opacity="0.85"/>
+  </g>
+
+  <!-- plane route -->
+  <path d="M275 465 C455 345 735 365 925 495" fill="none" stroke="#ff385c" stroke-width="8" stroke-dasharray="18 18" stroke-linecap="round" opacity="0.65"/>
+  <g transform="translate(927 496) rotate(35) scale(.82)">
+    <path d="M0-18 92 0 0 18 18 4 -45 4 -60 28 -78 28 -65 0 -78-28 -60-28 -45-4 18-4z" fill="#222222"/>
+  </g>
+
+  <!-- initials badges -->
+  <g font-family="'DM Sans', 'Inter', Arial, sans-serif" font-weight="900" text-anchor="middle">
+    <g transform="translate(430 875)"><circle r="62" fill="#ff385c"/><text y="18" font-size="54" fill="#fff">T</text></g>
+    <g transform="translate(600 905)"><circle r="62" fill="#0ea5a4"/><text y="18" font-size="54" fill="#fff">B</text></g>
+    <g transform="translate(770 875)"><circle r="62" fill="#fb8500"/><text y="18" font-size="54" fill="#fff">N</text></g>
+  </g>
+
+  <text x="600" y="1015" text-anchor="middle" font-family="'DM Sans', 'Inter', Arial, sans-serif" font-size="48" font-weight="900" fill="#222222" letter-spacing="-1">Palma de Maiorca</text>
+  <text x="600" y="1062" text-anchor="middle" font-family="'DM Sans', 'Inter', Arial, sans-serif" font-size="26" font-weight="800" fill="#6a6a6a" letter-spacing="5">29 JUN — 06 JUL</text>
+</svg>
